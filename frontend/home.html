@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppo.com</title>
+ 
+</head>
+<body>
+    <h2>Welcome to Shoppo.com</h2>
+    <form action="/showCustomer" method="get">
+        <input type="number" name="customerID" id="">
+        <input type="submit" value="Search Customer">
+    </form> <br>
+     <form action="/showProducts" method="get">
+         List our products <br>
+         <select name="productGroup" id="">
+            <option value="shirt">Shirt</option>
+            <option value="pant">Pant</option>
+            <option value="house">House/Apartmnt</option>
+         </select>
+         <input type="submit" value="Show products">
+     </form>
+   
+    <a href="/showBranch">List our worldwild offices</a> <br>
+    <a href="/aboutus">About Us</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our products</title>
+</head>
+<body>
+    <h2> Here is the products of 
+        <%= productCategory%>
+        @shoppo.com
+    </h2>
+    <table border="1">
+        <thead>
+            <th> Name of Product</th>
+            <th>Price</th>
+            <th>Category</th>
+        </thead>
+        <% productData.forEach(function(data){ %>
+            <tr>
+                <td>
+                    <%= data.name %>
+                </td>
+                <td>
+                    <%= data.price %>
+                </td>
+                <td>
+                    <%= data.category %>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+    <br>
+    <% for (let i=66130501025; i<=66130501033; i++){ %>
+        <li><%=i%></li>
+    <% } %>
+</body>
+</html>
