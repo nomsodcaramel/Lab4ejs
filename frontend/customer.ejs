@@ -8,37 +8,16 @@
 </head>
 
 <body>
-    <h2>Welcome
-        <% if(cInfo.cgender=='Male' ) {%>
-            Mr.
-            <% for (let i=0; i<5; i++) {%>
-                <%= cInfo.cname %>
-                    <% } %>
-                        <% } else { %>
-                            Miss
-                            <% for(let i=0; i<10; i++){%>
-                                <%= cInfo.cname %>
-                                    <%}%>
-                                        <%}%>
+    <h2>Welcome <%= cInfo.cgender === 'Male' ? 'Mr.' : 'Miss' %></h2>
+    <% for (let i = 0; i < (cInfo.cgender === 'Male' ? 5 : 10); i++) { %>
+        <%= cInfo.cname %>
+    <% } %>
 
-    </h2>
-    Your ID is <%= cInfo.cid %>
-        <br> zip code:
-        <b><i>
-                <%= cInfo.czip %>
-            </i></b>
+    <h3>Your ID is <%= cInfo.cid %></h3>
+    <p>zip code: <b><i><%= cInfo.czip %></i></b></p>
 
-        <% var cap="capital" ; var prov="province" %>
-            <%= cInfo.ccity%>
-                <% if(cInfo.ccity=='Bangkok' ) {%>
-                    <%= cap %>
-                        <%} else { %>
-                            <%=prov%>
-                                <% } %>
-
-
-
+    <% var locationType = cInfo.ccity === 'Bangkok' ? 'capital' : 'province'; %>
+    <%= cInfo.ccity %> <%= locationType %>
 </body>
 
 </html>
-มีเมนูบริบท

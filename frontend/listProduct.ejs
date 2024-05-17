@@ -6,33 +6,30 @@
     <title>Our products</title>
 </head>
 <body>
-    <h2> Here is the products of 
-        <%= productCategory%>
-        @shoppo.com
-    </h2>
+    <h2>Here are the products of <%= productCategory %> @shoppo.com</h2>
     <table border="1">
         <thead>
-            <th> Name of Product</th>
-            <th>Price</th>
-            <th>Category</th>
-        </thead>
-        <% productData.forEach(function(data){ %>
             <tr>
-                <td>
-                    <%= data.name %>
-                </td>
-                <td>
-                    <%= data.price %>
-                </td>
-                <td>
-                    <%= data.category %>
-                </td>
+                <th>Name of Product</th>
+                <th>Price</th>
+                <th>Category</th>
             </tr>
+        </thead>
+        <tbody>
+            <% productData.forEach(function(data) { %>
+                <tr>
+                    <td><%= data.name %></td>
+                    <td><%= data.price %></td>
+                    <td><%= data.category %></td>
+                </tr>
             <% }) %>
+        </tbody>
     </table>
     <br>
-    <% for (let i=66130501025; i<=66130501033; i++){ %>
-        <li><%=i%></li>
-    <% } %>
+    <ul>
+        <% for (let i = 66130501025; i <= 66130501033; i++) { %>
+            <li><%= i %></li>
+        <% } %>
+    </ul>
 </body>
 </html>
